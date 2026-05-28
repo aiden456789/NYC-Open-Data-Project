@@ -5,6 +5,7 @@ html,body{
 .container{
   display:flex;
   padding:10px;
+  flex-wrap:wrap;
 }
 .center{
   justify-content:center;
@@ -25,7 +26,7 @@ nav a:hover{
   color:white;
 }
 .subbanner{
-  background-color:cornflowerblue;
+  background-color:rgb(200,225,255);
 }
 #banner{
   background-color:blue;
@@ -39,17 +40,28 @@ nav a:hover{
   right: 0;
   bottom:0px;
 }
- 
+ #cards_output{
+   flex:1;
+   max-height:600px;;
+   overflow-y:scroll;
+ }
 .card{
   flex:1;
   margin:10px;
   padding:10px;
   border:1px solid gray;
   text-align:center;
-  box-shadow:2px 2px 2px black;
-  border-radius:2px;
+  background-color: beige;
 }
+#map{
+  flex:1;
+  width:90%;
 
+  height:calc(100vh - 300px);
+
+  border-radius:10px;
+  box-shadow:2px 2px 2px black;
+}
 .highlight{
   font-style:italic;
   color:blue;
@@ -64,21 +76,16 @@ nav a:hover{
   border-radius:4px;
   padding:6px;
   box-shadow:2px 2px 2px black;
+  cursor: pointer;
 }
 .button:hover{
   background-color:cornflowerblue;
 }
-.flex-1{
-  flex:1;
-}
+
 .fitted{
   max-width:200px;
   min-width:200px;
-}
-.card img{
-  height:100px;
-}
-#output{
-  display:flex;
-  flex-wrap:wrap;
+  border-radius:5px;
+  
+  box-shadow:2px 2px 2px gray;
 }
