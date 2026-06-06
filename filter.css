@@ -126,12 +126,6 @@ body {
     background-color: grey;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 28px;
-}
-
 .container h1 {
     margin: 0;
     text-align: center;

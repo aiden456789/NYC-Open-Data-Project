@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Violation Set</title>  
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script><link href="style.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
+     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="charthelper.js"></script>
+    <script src="chart.js"></script>    
+   </head>
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <h1> Housing Maintenance Violations - Chart </h1>
+    </div>
+
+<Nav>
+        <a href="home.html">Home</a>
+        <a href="chart.html">Chart</a>
+        <a href="filter.html">Filters</a>
+    </Nav>
+
+    </div>
+    <div class="container">
+      <p><span class="highlight">Scenario:</span>Chart analyzes the number of housing violations by boroughs.</p>
+      <select id="chartType" style="width:200px;">
+        <option>Select Chart Type</option>
+        <option value="bar">Bar</option>
+        <option value="pie">Pie</option>
+        <option value="donut">Donut</option>
+      </select>
+      <a class="button" onclick="ByBorough()"> Display </a>
+    </div>
+   
+    <div id="output"></div>
+
+  </body>
+</html>

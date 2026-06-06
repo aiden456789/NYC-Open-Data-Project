@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Violation Set</title>  
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script><link href="filter.css" rel="stylesheet" type="text/css" />
+     <link href="filter.css" rel="stylesheet" type="text/css" />
+    <script src="filterhelper.js"></script>
+    <script src="filter.js"></script>    
+   </head>
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <h1> Housing Maintenance Violations - Filter/Location map </h1>
+    </div>
+
+     <Nav>
+        <a href="home.html">Home</a>
+        <a href="chart.html">Chart</a>
+        <a href="filter.html">Filters</a>
+    </Nav>
+
+    <div class="filters">
+      <h2>Single Filter</h2>
+      <label for="borough">Borough:</label>
+        <select id="borough">
+        <option value="MANHATTAN">Manhattan</option>
+        <option value="QUEENS">Queens</option>
+        <option value="BRONX">Bronx</option>
+        <option value="BROOKLYN">Brooklyn</option>
+        <option value="STATEN ISLAND">Staten Island</option>
+        </select>
+       <a class="button" onclick="filterByBorough()"> Display </a>
+
+        <h2>Multiple Filters</h2>
+        <label for="violations">Violation status:</label>
+        <select id="violations">
+        <option value="INVALID CERTIFICATION">INVALID CERTIFICATION</option>
+        <option value="VIOLATION CLOSED">VIOLATION CLOSED</option>
+        <option value="NOT COMPLIED WITH">NOT COMPLIED WITH</option>
+        <option value="VIOLATION DISMISSED">VIOLATION DISMISSED</option>
+        <option value="NOV SENT OUT">NOV SENT OUT</option>
+        </select>
+
+        <label for="zip">Zip code:</label>
+        <input type="text" id="zip" placeholder="Enter">
+        <a class="button" onclick="filterByStatus()">Filter Status</a>
+        <a class="button" onclick="filterByZip()">Filter Zip</a>
+        </div>
+
+     <div id="output" class="container">
+      <div id="cards_output" class="container"></div>
+      <div id="map"></div>
+      <div id="result"></div>
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
