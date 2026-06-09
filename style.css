@@ -150,3 +150,14 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 }
+
+.side{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.side img{
+    width:400px;
+    height:auto;
+}
